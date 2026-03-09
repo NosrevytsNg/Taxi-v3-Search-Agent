@@ -141,12 +141,13 @@ flowchart TD
 
 A[Establish queue, and mark initial state as visited.]
 A --> W[Queue]
+A --> X[Skip/List of Visited Node]
 A --> B[Remove the state at the front of the queue]
 B --> C[Examine each possible action from the dequeued state]
 C --> D[Evaluate new states]
 D --> |Checks| Y[Visited Node?]
 Y -->|No| E[Update the path,<br>and add it to the rear of the queue.]
-Y -->|Yes| X[Skip]
+Y -->|Yes| X
 E --> W
 E --> Z[Goal Node?]
 Z --> |Yes| U[Goal Node]

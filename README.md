@@ -176,7 +176,7 @@ It uses a priority queue where the priority is determined by: **f(n) = g(n) + h(
 - DFS can reach solutions quickly but may produce longer paths.
 
 
-### Author
+## Author
 
 **Styverson Ng**
 

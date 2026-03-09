@@ -22,7 +22,7 @@ The goal of this project is to develop an intelligent agent capable of navigatin
 
 The agent must:
 
-```
+```mermaid
 flowchart LR
 
 A[Navigate the grid environment]

@@ -84,14 +84,14 @@ The taxi task is formulated as a search problem consisting of several key elemen
 ### Initial State (starting configuration of the environment)
 
 The initial state is defined by:
-- the taxi’s grid position
-- the passenger’s pickup location
+- taxi’s grid position
+- passenger’s pickup location
 
 
 ### Goal State
 
 The goal state is reached when:
-- the passenger is successfully delivered to the correct destination. 
+- passenger is successfully delivered to the correct destination. 
 
 
 

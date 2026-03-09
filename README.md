@@ -1,8 +1,8 @@
 # Taxi-v3 Intelligent Search Agent <br>
 
-An intelligent agent developed using classical search algorithms to solve the Taxi-v3 environment from Gymnasium. <br>
+An intelligent agent developed using classical search algorithms to solve the **Taxi-v3 environment from Gymnasium.** <br>
 
-The agent navigates a taxi in a grid world environment to pick up a passenger and deliver them to a destination while maximizing rewards and minimizing penalties. <br>
+The agent navigates a taxi in a grid world environment to **pick up a passenger** and **deliver them to a destination** while **maximizing rewards** and **minimizing penalties.** <br>
 
 This project evaluates three search strategies:
 
@@ -39,8 +39,8 @@ The task is completed when the passenger is successfully dropped off at the desi
 The system uses the Taxi-v3 environment provided by Gymnasium. 
 
 Grid Configuration: 
-- Grid size: 5 × 5
-- Total possible taxi locations: 25
+- Grid size: **5 × 5**
+- Total possible taxi locations: **25**
 
 Passenger and destination states are represented using the following locations:
 | Code | Location |
@@ -54,7 +54,7 @@ Passenger and destination states are represented using the following locations:
 These locations represent both passenger pickup and drop-off points.
 
 ## Taxi Actions
-The taxi agent can perform six discrete actions, allowing the taxi to move through the environment and complete the pickup and delivery task . 
+The taxi agent can perform **six discrete actions**, allowing the taxi to move through the environment and complete the pickup and delivery task . 
 
 | Action | Description |
 | ----- | ----- |
@@ -110,8 +110,8 @@ Examples include:
 
 ### 1. Depth-First Search (DFS)
 
-Depth-First Search explores the search space by expanding the *deepest nodes first before backtracking.*
-The algorithm uses a *stack structure*, allowing it to follow a path deeply until it reaches a goal state or a dead end.
+Depth-First Search explores the search space by expanding the **deepest nodes first before backtracking.**
+The algorithm uses a **stack structure**, allowing it to follow a path deeply until it reaches a goal state or a dead end.
 
 DFS workflow:
 
@@ -132,9 +132,9 @@ F --> B
 
 ### 2. Breadth-First Search (BFS)
 
-Breadth-First Search explores the search space *level by level*, examining all neighboring states before moving deeper.
+Breadth-First Search explores the search space **level by level**, examining all neighboring states before moving deeper.
 
-The algorithm uses a *queue structure (FIFO)* to ensure states are expanded in order of depth.
+The algorithm uses a **queue structure (FIFO)** to ensure states are expanded in order of depth.
 
 ```mermaid
 flowchart TD
@@ -157,10 +157,10 @@ F --> B
 
 A* Search is an informed search algorithm that uses a heuristic function to guide exploration toward promising states.
 
-It uses a priority queue where the priority is determined by: *f(n) = g(n) + h(n)*
+It uses a priority queue where the priority is determined by: **f(n) = g(n) + h(n)**
 
-- *g(n)* = cost to reach the current state
-- *h(n)* = heuristic estimate of distance to the goal
+- **g(n)** = cost to reach the current state
+- **h(n)** = heuristic estimate of distance to the goal
 
 
 ### Performance Comparison

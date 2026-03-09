@@ -148,21 +148,32 @@ Y -->|No| E[Update the path,<br>and add it to the rear of the queue.]
 Y -->|Yes| X[List of Visited Node/Skip]
 E --> W[Queue]
 E --> Z[Goal Node?]
-Z --> |Yes| U[Goal Node]
+Z --> |Yes| U[End]
 Z --> |No| F[Repeat until the goal state is reached.]
 F --> B
 ```
 
 ### 3. A* Search
 
+A* Search is an informed search algorithm that uses a heuristic function to guide exploration toward promising states.
+
+It uses a priority queue where the priority is determined by: *f(n) = g(n) + h(n)*
+
+- *g(n)* = cost to reach the current state
+- *h(n)* = heuristic estimate of distance to the goal
 
 
+### Performance Comparison
 
+| Algorithm | AvgDuration (ms) | Avg Steps | Avg Path Length |
+| ----- | ----- | ----- | ----- |
+| DFS | 0.012 | 113.126 | 11.493 | 
+| BFS | 0.018 | 124.491 | 11.013 | 
+| A* | 0.010 | 89.891 | 11.013 |
 
-
-
-
-
+- A* achieved the best overall performance in both execution time and number of explored steps.
+- BFS guarantees optimal path length but requires more exploration.
+- DFS can reach solutions quickly but may produce longer paths.
 
 
 

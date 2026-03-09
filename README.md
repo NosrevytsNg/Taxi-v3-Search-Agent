@@ -116,7 +116,7 @@ The algorithm uses a stack structure, allowing it to follow a path deeply until 
 DFS workflow:
 
 ```mermaid
-flowchart LR
+flowchart TD
 
 A[Initialize the environment and stack]
 A --> B[Select a state from the stack]

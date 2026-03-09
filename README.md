@@ -141,7 +141,7 @@ flowchart TD
 
 A[Establish queue, and mark initial state as visited.]
 A --> W[Queue]
-A --> X[Skip/List of Visited Node]
+A --> X[List of Visited Node/Skip]
 A --> B[Remove the state at the front of the queue]
 B --> C[Examine each possible action from the dequeued state]
 C --> D[Evaluate new states]
@@ -152,6 +152,7 @@ E --> W
 E --> Z[Goal Node?]
 Z --> |Yes| U[Goal Node]
 Z --> |No| F[Repeat until the goal state is reached.]
+F --> B
 ```
 
 ### 3. A* Search

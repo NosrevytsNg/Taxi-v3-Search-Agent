@@ -26,10 +26,10 @@ The agent must:
 flowchart LR
 
 A[Navigate the grid environment]
-A -> B[Locate the passenger]
-B -> C[Pick up the passenger]
-C -> D[Transport the passenger to the destination]
-D -> E[Drop the passenger at the correct location]
+A --> B[Locate the passenger]
+B --> C[Pick up the passenger]
+C --> D[Transport the passenger to the destination]
+D --> E[Drop the passenger at the correct location]
 ```
 
 The task is completed when the passenger is successfully dropped off at the designated destination state. 

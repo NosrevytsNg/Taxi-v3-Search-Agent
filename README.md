@@ -122,7 +122,7 @@ A[Initialize the environment and stack]
 A --> B[Select a state from the stack]
 B --> C[Explore each possible action from the selected state.]
 C --> D[Evaluate new states]
-D --> |Checks| Y[Goal Nodes?]
+D --> |Checks| Y[Goal Node?]
 Y -->|No| E[Add unvisited states back into the stack]
 Y -->|Yes| X[End]
 E --> |Updates| W[List of Visited Nodes]
@@ -139,16 +139,18 @@ The algorithm uses a *queue structure (FIFO)* to ensure states are expanded in o
 ```mermaid
 flowchart TD
 
-A[Initialize the environment and stack]
+A[Establish queue, and mark initial state as visited.]
+A --> W[Queue]
 A --> B[Remove the state at the front of the queue]
 B --> C[Examine each possible action from the dequeued state]
 C --> D[Evaluate new states]
-D --> |Checks| Y[Visited Nodes?]
+D --> |Checks| Y[Visited Node?]
 Y -->|No| E[Update the path,<br>and add it to the rear of the queue.]
 Y -->|Yes| X[Skip]
-E --> W[Queue]
-E --> F[Repeat until the goal state is reached.]
-F --> B
+E --> W
+E --> Z[Goal Node?]
+Z --> |Yes| U[Goal Node]
+Z --> |No| F[Repeat until the goal state is reached.]
 ```
 
 ### 3. A* Search

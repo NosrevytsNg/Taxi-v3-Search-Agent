@@ -125,32 +125,26 @@ C --> D[Evaluate new states]
 D --> |Checks| Y[Goal Nodes?]
 Y -->|No| E[Add unvisited states back into the stack]
 Y -->|Yes| X[End]
-E --> W[Visited Nodes]
+E --> |Updates| W[List of Visited Nodes]
 E --> F[Repeat until the goal state is reached.]
 F --> B
 ```
 
-A --> B[Toxicity Detection Model<br>XLM-R Toxicity Classifier]
-
-B -->|Toxic comments| C[Flagged / Audit Log]
-
-B -->|Non-toxic comments| D[Cleaned Dataset]
-
-DFS is useful as a baseline algorithm because it is simple and can find solutions quickly if the goal lies deep in the search tree. 
-
-However, DFS does not guarantee the shortest path.
-
 ### 2. Breadth-First Search (BFS)
 
 ```mermaid
-flowchart LR
+flowchart TD
 
 A[Initialize the environment and stack]
 A --> B[Select a state from the stack]
-B --> C[Expand all possible actions]
+B --> C[Explore each possible action from the selected state.]
 C --> D[Evaluate new states]
-D --> E[Add unvisited states back into the stack]
+D --> |Checks| Y[Goal Nodes?]
+Y -->|No| E[Add unvisited states back into the stack]
+Y -->|Yes| X[End]
+E --> W[Visited Nodes]
 E --> F[Repeat until the goal state is reached.]
+F --> B
 ```
 
 ### 3. A* Search

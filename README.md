@@ -106,6 +106,67 @@ Examples include:
 - drop-off actions completing the task when performed at the correct location.
 
 
+# Algorithms Implemented
+
+### 1. Depth-First Search (DFS)
+
+Depth-First Search explores the search space by expanding the deepest nodes first before backtracking.
+The algorithm uses a stack structure, allowing it to follow a path deeply until it reaches a goal state or a dead end.
+
+DFS workflow:
+
+```mermaid
+flowchart LR
+
+A[Initialize the environment and stack]
+A --> B[Select a state from the stack]
+B --> C[Explore each possible action from the selected state.]
+C --> D[Evaluate new states]
+D --> Z[Visited Nodes<br>Checks]
+D --> Y[Goal Nodes?<br>No]
+D --> E[Add unvisited states back into the stack]
+E --> F[Repeat until the goal state is reached.]
+```
+
+DFS is useful as a baseline algorithm because it is simple and can find solutions quickly if the goal lies deep in the search tree. 
+
+However, DFS does not guarantee the shortest path.
+
+### 2. Breadth-First Search (BFS)
+
+```mermaid
+flowchart LR
+
+A[Initialize the environment and stack]
+A --> B[Select a state from the stack]
+B --> C[Expand all possible actions]
+C --> D[Evaluate new states]
+D --> E[Add unvisited states back into the stack]
+E --> F[Repeat until the goal state is reached.]
+```
+
+### 3. A* Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

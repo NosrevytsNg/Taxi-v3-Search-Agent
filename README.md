@@ -110,8 +110,8 @@ Examples include:
 
 ### 1. Depth-First Search (DFS)
 
-Depth-First Search explores the search space by expanding the deepest nodes first before backtracking.
-The algorithm uses a stack structure, allowing it to follow a path deeply until it reaches a goal state or a dead end.
+Depth-First Search explores the search space by expanding the *deepest nodes first before backtracking.*
+The algorithm uses a *stack structure*, allowing it to follow a path deeply until it reaches a goal state or a dead end.
 
 DFS workflow:
 
@@ -132,17 +132,21 @@ F --> B
 
 ### 2. Breadth-First Search (BFS)
 
+Breadth-First Search explores the search space *level by level*, examining all neighboring states before moving deeper.
+
+The algorithm uses a *queue structure (FIFO)* to ensure states are expanded in order of depth.
+
 ```mermaid
 flowchart TD
 
 A[Initialize the environment and stack]
-A --> B[Select a state from the stack]
-B --> C[Explore each possible action from the selected state.]
+A --> B[Remove the state at the front of the queue]
+B --> C[Examine each possible action from the dequeued state]
 C --> D[Evaluate new states]
-D --> |Checks| Y[Goal Nodes?]
-Y -->|No| E[Add unvisited states back into the stack]
-Y -->|Yes| X[End]
-E --> W[Visited Nodes]
+D --> |Checks| Y[Visited Nodes?]
+Y -->|No| E[Update the path,<br>and add it to the rear of the queue.]
+Y -->|Yes| X[Skip]
+E --> W[Queue(Rear)]
 E --> F[Repeat until the goal state is reached.]
 F --> B
 ```

@@ -1,4 +1,4 @@
-# Taxi-v3 Intelligent Search Agent <br>
+# 🚕 Taxi-v3 Intelligent Search Agent <br>
 
 An intelligent agent developed using classical search algorithms to solve the **Taxi-v3 environment from Gymnasium.** <br>
 

@@ -146,7 +146,7 @@ C --> D[Evaluate new states]
 D --> |Checks| Y[Visited Nodes?]
 Y -->|No| E[Update the path,<br>and add it to the rear of the queue.]
 Y -->|Yes| X[Skip]
-E --> W[Queue(Rear)]
+E --> W[Queue]
 E --> F[Repeat until the goal state is reached.]
 F --> B
 ```

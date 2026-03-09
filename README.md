@@ -122,11 +122,12 @@ A[Initialize the environment and stack]
 A --> B[Select a state from the stack]
 B --> C[Explore each possible action from the selected state.]
 C --> D[Evaluate new states]
-D --> |Checks| Z[Visited Nodes]
-Z --> Y[Goal Nodes?]
+D --> |Checks| Y[Goal Nodes?]
 Y -->|No| E[Add unvisited states back into the stack]
 Y -->|Yes| X[End]
+E --> W[Visited Nodes]
 E --> F[Repeat until the goal state is reached.]
+F --> B
 ```
 
 A --> B[Toxicity Detection Model<br>XLM-R Toxicity Classifier]

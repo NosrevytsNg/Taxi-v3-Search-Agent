@@ -140,8 +140,8 @@ The algorithm uses a *queue structure (FIFO)* to ensure states are expanded in o
 flowchart TD
 
 A[Establish queue, and mark initial state as visited.]
-A --> W[Queue]
-A --> X[List of Visited Node/Skip]
+A --> |Initiating Queue| W[Queue]
+A --> |Additioning Initial State to List| X[List of Visited Node/Skip]
 A --> B[Remove the state at the front of the queue]
 B --> C[Examine each possible action from the dequeued state]
 C --> D[Evaluate new states]
